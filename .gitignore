@@ -1,0 +1,33 @@
+# Streamlit and local secrets
+.env
+.env.*
+.streamlit/secrets.toml
+.streamlit/*.pid
+logs/
+
+# Real business data must never be committed to this public demo.
+data/private/
+exports/
+guest-data/
+guest-exports/
+booking-reports/
+reservation-exports/
+calendar-exports/
+airbnb-private-exports/
+lodgify-exports/
+stripe-exports/
+payment-reports/
+financial-files/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

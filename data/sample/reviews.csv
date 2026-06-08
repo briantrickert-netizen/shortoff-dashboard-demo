@@ -1,0 +1,9 @@
+date,platform,rating,sentiment,topic
+2026-01-23,Airbnb,5,positive,location
+2026-02-07,Direct,5,positive,communication
+2026-02-21,Airbnb,4,neutral,check-in
+2026-03-26,Direct,5,positive,views
+2026-04-17,OTA,5,positive,cleanliness
+2026-04-29,Direct,5,positive,planning support
+2026-05-27,Airbnb,4,neutral,amenities
+2026-06-09,Direct,5,positive,family trip

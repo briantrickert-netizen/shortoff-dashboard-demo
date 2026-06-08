@@ -1,0 +1,5 @@
+date,area,issue,impact,status,next_action
+2026-01-10,Booking,Confirm booking engine source of truth,High,Open,Choose Lodgify or Booking Calendar Pro as canonical calendar
+2026-02-02,SEO,Verify distances to major attractions,Medium,Open,Confirm exact distances before publishing copy
+2026-03-01,Website,Add local guide to primary navigation,High,Open,Update WordPress navigation
+2026-04-05,Guest Experience,Draft pre-arrival guide,Medium,Open,Create reusable email template
