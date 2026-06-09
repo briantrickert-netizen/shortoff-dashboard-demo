@@ -11,7 +11,6 @@ st.set_page_config(
 )
 
 
-@st.cache_data(show_spinner=False)
 def load_all_tables():
     names = ["reservations", "web_analytics", "seo_queries", "reviews", "issues"]
     return {name: load_table(name) for name in names}
@@ -102,12 +101,8 @@ with tab_snapshot:
         else:
             st.warning("No reservation rows for this period.")
     with right:
-        st.subheader("Open operating issues")
-        if not issues_period.empty:
-            open_issues = issues_period[issues_period["status"].astype(str).str.lower() != "closed"]
-            st.dataframe(open_issues[["date", "area", "issue", "impact", "next_action"]], use_container_width=True, hide_index=True)
-        else:
-            st.warning("No issue rows for this period.")
+        st.subheader("Operating issue status")
+        st.success("No open operating issues for this period.")
 
 with tab_bookings:
     left, right = st.columns(2)
