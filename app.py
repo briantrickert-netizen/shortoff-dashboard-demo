@@ -90,19 +90,14 @@ tab_snapshot, tab_bookings, tab_marketing, tab_guest, tab_health = st.tabs(
 )
 
 with tab_snapshot:
-    left, right = st.columns([1.15, 0.85])
-    with left:
-        st.subheader("Revenue by booking month")
-        if not reservations_period.empty:
-            monthly = reservations_period.copy()
-            monthly["month"] = monthly["date_booked"].dt.to_period("M").dt.to_timestamp()
-            chart = monthly.groupby("month", as_index=False)["gross_revenue"].sum().set_index("month")
-            st.bar_chart(chart)
-        else:
-            st.warning("No reservation rows for this period.")
-    with right:
-        st.subheader("Operating issue status")
-        st.success("No open operating issues for this period.")
+    st.subheader("Revenue by booking month")
+    if not reservations_period.empty:
+        monthly = reservations_period.copy()
+        monthly["month"] = monthly["date_booked"].dt.to_period("M").dt.to_timestamp()
+        chart = monthly.groupby("month", as_index=False)["gross_revenue"].sum().set_index("month")
+        st.bar_chart(chart)
+    else:
+        st.warning("No reservation rows for this period.")
 
 with tab_bookings:
     left, right = st.columns(2)
